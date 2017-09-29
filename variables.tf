@@ -10,42 +10,59 @@ variable "version" {
 }
 
 variable "name" {
-  default     = "%H"
   description = ""
+  default     = ""
+}
+
+variable "ip_addresses" {
+  type = "list"
+
+  default = [
+    "127.0.0.1",
+  ]
 }
 
 variable "client_advertise_fqdn" {
-  default     = "%H"
   description = ""
+  type = "list"
 }
 
 variable "peer_advertise_fqdn" {
-  default     = "%H"
   description = ""
+  type = "list"
 }
 
 variable "client_listen_host" {
-  default     = "0.0.0.0"
   description = ""
+  default     = "0.0.0.0"
 }
 
 variable "peer_listen_host" {
-  default     = "0.0.0.0"
   description = ""
+  default     = "0.0.0.0"
 }
 
 variable "client_tls_dir" {
-  default     = "/etc/ssl/etcd"
   description = ""
+  default     = "/etc/ssl/etcd"
 }
 
 variable "peer_tls_dir" {
-  default     = "/etc/ssl/certs/etcd"
   description = ""
+  default     = "/etc/ssl/certs/etcd"
 }
 
 variable "server_tls_dir" {
-  default     = "/etc/ssl/certs/etcd"
   description = ""
+  default     = "/etc/ssl/certs/etcd"
 }
 
+variable "client_port" {
+  description = ""
+  default     = 2379
+}
+
+variable "peer_port" {
+  description = ""
+  default     = 2380
+}
