@@ -1,12 +1,22 @@
 variable "unit_options" {
-  type        = "list"
-  default     = []
   description = ""
+  default     = []
+  type        = "list"
 }
 
 variable "version" {
-  default     = "v3.2.7"
   description = ""
+  default     = "v3.2.7"
+}
+
+variable "write_files" {
+  description = ""
+  default     = false
+}
+
+variable "asset_dir" {
+  description = ""
+  default     = "assets"
 }
 
 variable "name" {
@@ -24,12 +34,12 @@ variable "ip_addresses" {
 
 variable "client_advertise_fqdn" {
   description = ""
-  type = "list"
+  type        = "list"
 }
 
 variable "peer_advertise_fqdn" {
   description = ""
-  type = "list"
+  type        = "list"
 }
 
 variable "client_listen_host" {
